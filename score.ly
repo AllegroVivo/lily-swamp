@@ -83,29 +83,29 @@
         \score {
             <<
                  \new StaffGroup <<
-                     \ReedOneBigBrightBeautiful
-                     \ReedTwoBigBrightBeautiful
+                     %\ReedOneBigBrightBeautiful
+                     %\ReedTwoBigBrightBeautiful
                  >>
                  \new StaffGroup <<
-                     \HornBigBrightBeautiful
-                     \TrumpetBigBrightBeautiful
-                     \TromboneBigBrightBeautiful
+                     %\HornBigBrightBeautiful
+                     %\TrumpetBigBrightBeautiful
+                     %\TromboneBigBrightBeautiful
                  >>
                  \new StaffGroup <<
-                     \GuitarOneBigBrightBeautiful
-                     \GuitarTwoBigBrightBeautiful
+                     %\GuitarOneBigBrightBeautiful
+                     %\GuitarTwoBigBrightBeautiful
                  >>
                  \new StaffGroup <<
-                     \PercussionBigBrightBeautiful
-                     \new DrumStaff \with { instrumentName = "Drums" }
+                     %\PercussionBigBrightBeautiful
+                     %\new DrumStaff \with { instrumentName = "Drums" }
                      << >>  % TODO: Drums
                  >>
                  \KeyboardOneBigBrightBeautiful
-                 \KeyboardTwoBigBrightBeautiful
+                 %\KeyboardTwoBigBrightBeautiful
                  \new StaffGroup <<
-                     \ViolinOneBigBrightBeautiful
-                     \ViolinTwoBigBrightBeautiful
-                     \CelloBigBrightBeautiful
+                     %\ViolinOneBigBrightBeautiful
+                     %\ViolinTwoBigBrightBeautiful
+                     %\CelloBigBrightBeautiful
                      \BassBigBrightBeautiful
                  >>
             >>

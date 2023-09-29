@@ -43,7 +43,7 @@ KeyboardOneNumberTwoRH = \relative c'' {
     R1 * 3 | \bar "||" \break
     R1 \mp | <d, b'>4-- \< \ClrVibes <fs d'>-- <a fs'>-- <d a'>-- | <e b'>1( \mf <fs cs'>) | \break
     \revert Slur.ratio
-    <e a cs>-> | R1 | <a, b e> | R1 | r8 \Piano a,8( e' a,) r a( e'4) | \bar "||" \break
+    <e a cs>-> | R1 | <a, b e> | R1 | r8 \Piano a,8( e'[ a,]) r a( e'4) | \bar "||" \break
     \repeat unfold 3 { r8 a,( e' a,) r a( e'4) | }
     r8 a,( e' a) r a,( e'4)
     \repeat unfold 2 { r8 a,( e' a,) r a( e'4) | }
@@ -120,9 +120,9 @@ KeyboardOneNumberTwoRH = \relative c'' {
     \set glissandoMap = #'((0 . 1))
     \override Glissando.bound-details.left.X = #72
     \hideNotes \grace g, \glissando \unHideNotes <g' c ~ >1 | <f c'> |
-    \sl \repeat unfold 7 { b4 } \revert Stem.transparent b8 b ~ | \break
+    \CompStyleNH \repeat unfold 7 { b4 } \revert Stem.transparent b8 b ~ | \break
     \hide Stem b4 b b \revert Stem.transparent b8 b ~ |
-    \hide Stem \repeat unfold 6 { b4 } \revert Stem.transparent b8-> \nsl r r4 | \break
+    \hide Stem \repeat unfold 6 { b4 } \revert Stem.transparent b8-> \RevertNH r r4 | \break
     \revert Glissando.bound-details.left.X
     \set glissandoMap = #'((0 . 2))
     \xNote c,4^\markup { \small \bold \italic "Big smear" } \glissando <c' e g> ~ q8 q r <d fs a> ~ | q1 |
@@ -237,19 +237,19 @@ KeyboardOneNumberTwoLH = \relative c''' {
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% \score {
-%     \new PianoStaff <<
-%         \new Staff = "right" { \KeyboardOneNumberTwoRH }
-%         \new Staff = "left"  { \KeyboardOneNumberTwoLH }
-%     >>
-%     \layout {
-%         \context {
-%             \Staff
-%             \remove Ottava_spanner_engraver
-%         }
-%         \context {
-%             \Voice
-%             \consists Ottava_spanner_engraver
-%         }
-%     }
-% }
+\score {
+    \new PianoStaff <<
+        \new Staff = "right" { \KeyboardOneNumberTwoRH }
+        \new Staff = "left"  { \KeyboardOneNumberTwoLH }
+    >>
+    \layout {
+        \context {
+            \Staff
+            \remove Ottava_spanner_engraver
+        }
+        \context {
+            \Voice
+            \consists Ottava_spanner_engraver
+        }
+    }
+}

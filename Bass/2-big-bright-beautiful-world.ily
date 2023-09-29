@@ -12,7 +12,7 @@ BassNumberTwo = \relative c' {
     d2. \flageolet \p r4 | R1 * 3 | \bar "||"
     d1 \mp | cs2. ~ cs8 cs | d1 | cs2. cs4 |
     d2. \< d4 | cs2 \> cs | b2. \! b4 | b2 b4 cs |
-    d2. d4 ~ | d d2 b4 | g2. b4 | e,2 ~ e8 r r4 | \bar "||" 
+    d2. d4 ~ | d d2 b4 | g2. b4 | e,2 ~ e8 r r4 |
     a1 \dolce \arco | b | cs | ds | d!2. d4 | cs1 \> | e1 \! | 
     \time 3/4 R2. | \time 4/4 R1 |
     e,2-> \mf \pizz r4 r8 b' \solo | e4 a,8 e ~ e4 e | \bar "||" 
@@ -61,12 +61,18 @@ BassNumberTwo = \relative c' {
     f'4.-> f8-> ~ f2 | f,1-> | d'8 \mp d d _\markup { \italic "cresc" } d d d \< c a |
     g g g g g g g \! g | g'-> g-> g-> g-> g4-> \xNote g \glissando | \bar "||"
     c,4 r8 a c c a g | f4 c'16 ef f8 ~ f ef f g | a4 a, ~ a8 c d e? | 
-    f4 `
+    f4 r8 f ~ f ef f ef | 
+    d4 d d8 e f g ~ \fp | g4 g,2 \< g4 ~ | g8 g \! g g g-> r r4 |
+    c-> c'4.-> c,8 g'[ c] | c, c c c g' g a c | c,4 c' c,8 c g' c ~ | 
+    c c-> r c a a g e | c4 c' c,8 c cs d ~ | d a' d a d r d,-> f,-> ~ | \break
+    f2 \fermata \caesura r2 | c'-> \glissando c' \fermata |
+    << { \voiceOne c,4_> d\rest } \\ { \voiceTwo \hideNotes c4 \glissando c,4 \unHideNotes } >> r2 |
+    \bar "|."
 }
 
-\score {
-    \new Staff { \BassNumberTwo }
-    \layout {
-        
-    }
-}
+% \score {
+%     \new Staff { \BassNumberTwo }
+%     \layout {
+%         
+%     }
+% }
