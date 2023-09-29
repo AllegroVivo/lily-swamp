@@ -40,12 +40,12 @@ KeyboardOneNumberOneLH = \relative c'' {
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\score {
-    \new PianoStaff <<
-        \new Staff { \KeyboardOneNumberOneRH }
-        \new Staff { \KeyboardOneNumberOneLH }
-    >>
-    \layout {
-        
-    }
-}
+% \score {
+%     \new PianoStaff <<
+%         \new Staff { \KeyboardOneNumberOneRH }
+%         \new Staff { \KeyboardOneNumberOneLH }
+%     >>
+%     \layout {
+%         
+%     }
+% }

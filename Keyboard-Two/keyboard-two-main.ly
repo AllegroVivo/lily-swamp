@@ -2,16 +2,16 @@
 
 \include "1-overture.ily"
 
-KeyboardOneOverture = {
+KeyboardTwoOverture = {
     <<
-        \new PianoStaff \with { instrumentName = "Keyboard I" } 
+        \new PianoStaff \with { instrumentName = "Keyboard II" } 
         {
             <<
                 \new Staff {
-                    \KeyboardOneNumberOneRH
+                    \KeyboardTwoNumberOneRH
                 }
                 \new Staff {
-                    \KeyboardOneNumberOneLH
+                    \KeyboardTwoNumberOneLH
                 }
             >>
         }

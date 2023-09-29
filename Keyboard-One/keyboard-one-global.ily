@@ -43,6 +43,12 @@ Piano = ^\markup {
     \override #'(box-padding . 0.5) \box
     "Piano"
 }
+GndPiano = ^\markup { 
+    \general-align #X #-0.7
+    \bold 
+    \override #'(box-padding . 0.5) \box
+    "Grand Piano"
+}
 ClrVibes = ^\markup { 
     \general-align #X #-0.7
     \bold 
@@ -80,7 +86,36 @@ PopPiano = ^\markup {
     \override #'(box-padding . 0.5) \box
     "Pop Piano"
 }
-
+RhodesOrWurly = ^\markup { 
+    \general-align #X #-0.7
+    \bold 
+    \override #'(box-padding . 0.5) \box
+    "Soft Rhodes or Wurly"
+}
+Rhodes = ^\markup { 
+    \general-align #X #-0.7
+    \bold 
+    \override #'(box-padding . 0.5) \box
+    "Rhodes"
+}
+ToyPiano = ^\markup { 
+    \general-align #X #-0.7
+    \bold 
+    \override #'(box-padding . 0.5) \box
+    "Toy Piano"
+}
+MarcTbn = ^\markup { 
+    \general-align #X #-0.7
+    \bold 
+    \override #'(box-padding . 0.5) \box
+    "Marc. Tbns"
+}
+MarcTpt = ^\markup { 
+    \general-align #X #-0.7
+    \bold 
+    \override #'(box-padding . 0.5) \box
+    "Marc. Tpts"
+}
 %%%%%%%%%%%% Multiline Instruments %%%%%%%%%%%%
 PzBs = ^\markup \column { 
     \line {
@@ -147,6 +182,12 @@ number-four-setup = {
     \key c \major \time 4/4
     \tempo \markup { \large \bold "Colla Voce" }
     \override Glissando.style = #'default
+}
+number-four-a-setup = {
+    \main-setup
+    \key g \major \time 4/4
+    \tempo \markup { \large \bold "2x" }
+    \override Glissando.style = #'default 
 }
 
 %------------%
