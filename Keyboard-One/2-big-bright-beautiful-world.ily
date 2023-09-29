@@ -3,7 +3,7 @@
 
 \include "keyboard-one-global.ily"
 
-KeyboardOneNumberOneRH = \relative c'' {
+KeyboardOneNumberTwoRH = \relative c'' {
     \number-two-setup
  
     \override Slur.positions = #'(5 . 5)
@@ -137,7 +137,7 @@ KeyboardOneNumberOneRH = \relative c'' {
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-KeyboardOneNumberOneLH = \relative c''' {
+KeyboardOneNumberTwoLH = \relative c''' {
     \number-two-setup \clef treble
     
     \override Slur.ratio = #3
@@ -237,19 +237,19 @@ KeyboardOneNumberOneLH = \relative c''' {
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\score {
-    \new PianoStaff <<
-        \new Staff = "right" { \KeyboardOneNumberOneRH }
-        \new Staff = "left"  { \KeyboardOneNumberOneLH }
-    >>
-    \layout {
-        \context {
-            \Staff
-            \remove Ottava_spanner_engraver
-        }
-        \context {
-            \Voice
-            \consists Ottava_spanner_engraver
-        }
-    }
-}
+% \score {
+%     \new PianoStaff <<
+%         \new Staff = "right" { \KeyboardOneNumberTwoRH }
+%         \new Staff = "left"  { \KeyboardOneNumberTwoLH }
+%     >>
+%     \layout {
+%         \context {
+%             \Staff
+%             \remove Ottava_spanner_engraver
+%         }
+%         \context {
+%             \Voice
+%             \consists Ottava_spanner_engraver
+%         }
+%     }
+% }

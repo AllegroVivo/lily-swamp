@@ -2,8 +2,10 @@
 
 \include "1-overture.ily"
 
-PercussionOverture = {
-    \new Staff \with { instrumentName = "Percussion" } {
-        \PercussionNumberOne
+DrumsOverture = {
+    \new DrumStaff \with {
+        instrumentName = "Percussion" drum 
+        drumStyleTable = #(alist->hash-table number-one-style)
     }
+    { \DrumsNumberOne }
 }
