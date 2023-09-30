@@ -8,10 +8,10 @@ KeyboardOneOverture = {
         \new PianoStaff \with { instrumentName = "Keyboard I" } 
         {
             <<
-                \new Staff {
+                \new Staff = "right" {
                     \KeyboardOneNumberOneRH
                 }
-                \new Staff {
+                \new Staff = "left" {
                     \KeyboardOneNumberOneLH
                 }
             >>
@@ -24,10 +24,10 @@ KeyboardOneBigBrightBeautiful = {
         \new PianoStaff \with { instrumentName = "Keyboard I" } 
         {
             <<
-                \new Staff {
+                \new Staff = "right" {
                     \KeyboardOneNumberTwoRH
                 }
-                \new Staff {
+                \new Staff = "left" {
                     \KeyboardOneNumberTwoLH
                 }
             >>

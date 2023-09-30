@@ -12,6 +12,36 @@ Clarinet = ^\markup {
     \override #'(box-padding . 0.5) \box
     "Clarinet"
 }
+BsClar = ^\markup { 
+    \general-align #X #-0.7
+    \bold 
+    \override #'(box-padding . 0.5) \box
+    "Bass Clarinet"
+}
+Flute = ^\markup { 
+    \general-align #X #-0.7
+    \bold 
+    \override #'(box-padding . 0.5) \box
+    "Flute"
+}
+SopSax = ^\markup { 
+    \general-align #X #-0.7
+    \bold 
+    \override #'(box-padding . 0.5) \box
+    "Soprano Sax"
+}
+TenorSax = ^\markup { 
+    \general-align #X #-0.7
+    \bold 
+    \override #'(box-padding . 0.5) \box
+    "Tenor Sax"
+}
+BariSax = ^\markup { 
+    \general-align #X #-0.7
+    \bold 
+    \override #'(box-padding . 0.5) \box
+    "Bari Sax"
+}
 
 %------------------%
 % Initial Settings %
@@ -29,7 +59,7 @@ number-one-setup = {
 }
 number-two-setup = {
     \main-setup
-    \key a \major \time 4/4
+    \key b \major \time 4/4
 }
 number-two-a-setup = {
     \main-setup

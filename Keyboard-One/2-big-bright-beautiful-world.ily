@@ -34,10 +34,10 @@ KeyboardOneNumberTwoRH = \relative c'' {
     r8 e <a e'>[ e] r e <a e'>4 | r8 e <a e'>[ e] r e <a e'>4 |
     r4 d,4( g d) | r b( <e b'>2) | \bar "||" \break
     \set tieWaitForNote = ##t
-    << { \voiceOne \acciaccatura { a16 \mf e'_~ } < a, e' a>1-> ~ | <e' a>4. r8 r2 | } 
+    << { \voiceOne \grace { a16 \mf e'_~ } < a, e' a>1-> ~ | <e' a>4. r8 r2 | } 
        \\ { \voiceTwo a,4. a8 ~ a2 | d4. e,8( fs gs a b)} >> \oneVoice
     cs8^( e, a cs ~ cs a gs a) ~ | a1 | \break
-    << { \voiceOne \acciaccatura { a16 \mf d!_~ } < a d a'>1-> | } 
+    << { \voiceOne \grace { a16 \mf d!_~ } < a d a'>1-> | } 
        \\ { \voiceTwo a4. a8 ~ a2 | } >> \oneVoice
     <a e'>4. a8 ~ a2 | <a d e>1 | \time 3/4 R2. | \time 4/4 \break
     R1 * 3 | \bar "||" \break
@@ -130,8 +130,11 @@ KeyboardOneNumberTwoRH = \relative c'' {
     <c ~ e g ~>4 <c ~ d g ~>8 <c e g> ~ <c ~ e g ~> <c ~ d g ~> <c e g>4 ~ | \break
     q2 ~ q8 q r <d fs a> ~ | q2 r4 q8-> <c f a c>-> ~| 
     \set glissandoMap = #'((3 . 0))
-    q2 \fermata \glissando \grace \parenthesize d,,16 r2 |
-    \override NoteHead.font-size = #4 \override NoteHead.style = #'harmonic b''1-> ~ \fermata |
+    << { \voiceOne \stemDown q2 \fermata b\rest } 
+       \\ 
+       { \voiceTwo \hideNotes c'2 \glissando \hideNotes a,, \unHideNotes } |
+    >>
+    \override NoteHead.font-size = #4 \override NoteHead.style = #'harmonic b'1-> ~ \fermata |
     \override NoteHead.font-size = #-2 \override NoteHead.style = #'slash b4-> r r2 \bar "|."
 }
 
@@ -232,24 +235,25 @@ KeyboardOneNumberTwoLH = \relative c''' {
     R1 * 11 |
     \change Staff = "right" R1 | \change Staff = "left"
     R1 * 10 |
-    
+    R1 * 5 | r2 r4 <d,,, d'>8-> <f f'>-> ~ | 
+    <f f'>2 \fermata \caesura r | R1 \fermata | R1 | \bar "|."
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\score {
-    \new PianoStaff <<
-        \new Staff = "right" { \KeyboardOneNumberTwoRH }
-        \new Staff = "left"  { \KeyboardOneNumberTwoLH }
-    >>
-    \layout {
-        \context {
-            \Staff
-            \remove Ottava_spanner_engraver
-        }
-        \context {
-            \Voice
-            \consists Ottava_spanner_engraver
-        }
-    }
-}
+% \score {
+%     \new PianoStaff <<
+%         \new Staff = "right" { \KeyboardOneNumberTwoRH }
+%         \new Staff = "left"  { \KeyboardOneNumberTwoLH }
+%     >>
+%     \layout {
+%         \context {
+%             \Staff
+%             \remove Ottava_spanner_engraver
+%         }
+%         \context {
+%             \Voice
+%             \consists Ottava_spanner_engraver
+%         }
+%     }
+% }

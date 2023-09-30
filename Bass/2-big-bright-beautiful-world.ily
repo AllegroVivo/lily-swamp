@@ -18,7 +18,7 @@ BassNumberTwo = \relative c' {
     e,2-> \mf \pizz r4 r8 b' \solo | e4 a,8 e ~ e4 e | \bar "||" 
     a,2 \mf r4 a | b2 r4 b | cs2 r4 cs | ds2 fs4 b |
     d,!2-> d' \flageolet | cs,2. e'4 | 
-    b2.( a4 e8) r r4 r2 | R1 * 2 | \bar "||"
+    b2.( a4 e8) r r4 r2 | R1 | \bar "||"
     cs2 \mf d | cs d | cs d | cs b | cs d | cs d |
     g,4. g'8 ~ g2 | e4. b'8 ~ b4 e, | d2. a'4 | cs2. gs?4 |
     b b,2. ~ | b2 b4 cs | d2 d | e8-. r r4 r e | a4. b8 a4 e | \bar "||" 

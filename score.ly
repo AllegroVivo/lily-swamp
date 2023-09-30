@@ -38,38 +38,38 @@
             }
             footer = "Orchestrations by Danny Troob"
         }
-        \score {
-            <<
-                 \new StaffGroup <<
-                     \ReedOneOverture
-                     \ReedTwoOverture
-                 >>
-                 \new StaffGroup <<
-                     \HornOverture
-                     \TrumpetOverture
-                     \TromboneOverture
-                 >>
-                 \new StaffGroup <<
-                     \GuitarOneOverture
-                     \GuitarTwoOverture
-                 >>
-                 \new StaffGroup <<
-                     \PercussionOverture
-                     \new DrumStaff \with { instrumentName = "Drums" }
-                     << >>  % TODO: Drums
-                 >>
-                 \KeyboardOneOverture
-                 \KeyboardTwoOverture
-                 \new StaffGroup <<
-                     \ViolinOneOverture
-                     \ViolinTwoOverture
-                     \CelloOverture
-                     \BassOverture
-                 >>
-            >>
-            \layout {
-            }
-        } 
+        % \score {
+%             <<
+%                  \new StaffGroup <<
+%                      \ReedOneOverture
+%                      \ReedTwoOverture
+%                  >>
+%                  \new StaffGroup <<
+%                      \HornOverture
+%                      \TrumpetOverture
+%                      \TromboneOverture
+%                  >>
+%                  \new StaffGroup <<
+%                      \GuitarOneOverture
+%                      \GuitarTwoOverture
+%                  >>
+%                  \new StaffGroup <<
+%                      \PercussionOverture
+%                      \new DrumStaff \with { instrumentName = "Drums" }
+%                      << >>  % TODO: Drums
+%                  >>
+%                  \KeyboardOneOverture
+%                  \KeyboardTwoOverture
+%                  \new StaffGroup <<
+%                      \ViolinOneOverture
+%                      \ViolinTwoOverture
+%                      \CelloOverture
+%                      \BassOverture
+%                  >>
+%             >>
+%             \layout {
+%             }
+%        } 
     }
      \bookpart {
         \header {
@@ -83,8 +83,8 @@
         \score {
             <<
                  \new StaffGroup <<
-                     %\ReedOneBigBrightBeautiful
-                     %\ReedTwoBigBrightBeautiful
+                     \ReedOneBigBrightBeautiful
+                     \ReedTwoBigBrightBeautiful
                  >>
                  \new StaffGroup <<
                      %\HornBigBrightBeautiful

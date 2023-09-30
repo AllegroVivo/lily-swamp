@@ -17,6 +17,7 @@ arco = ^\markup { \general-align #X #-0.5  \bold \italic "arco" }
 pizz = ^\markup { \general-align #X #-0.5  \bold \italic "pizz." }
 
 solo = ^\markup { \general-align #X #-0.5  \bold \italic "solo" }
+play = ^\markup { \general-align #X #-0.5  \bold "PLAY" }
 
 csord = ^\markup { \translate #'(-1 . 0) \italic "con sord." }
 ssord = ^\markup { \translate #'(-1 . 0) \italic "senza sord." }
@@ -45,4 +46,8 @@ LgDiamondNH = {
     \RevertNH
     \override NoteHead.style = #'harmonic
     \override NoteHead.font-size = #3
+}
+CueNotes = {
+    \RevertNH
+    \override NoteHead.font-size = #-3
 }

@@ -12,6 +12,24 @@ Piccolo = ^\markup {
     \override #'(box-padding . 0.5) \box
     "Piccolo"
 }
+Flute = ^\markup { 
+    \general-align #X #-0.7
+    \bold 
+    \override #'(box-padding . 0.5) \box
+    "Flute"
+}
+Clarinet = ^\markup { 
+    \general-align #X #-0.7
+    \bold 
+    \override #'(box-padding . 0.5) \box
+    "Clarinet"
+}
+AltoSax = ^\markup { 
+    \general-align #X #-0.7
+    \bold 
+    \override #'(box-padding . 0.5) \box
+    "Alto Sax"
+}
 
 %------------------%
 % Initial Settings %
