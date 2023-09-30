@@ -64,7 +64,7 @@ BassNumberTwo = \relative c' {
     f4 r8 f ~ f ef f ef | 
     d4 d d8 e f g ~ \fp | g4 g,2 \< g4 ~ | g8 g \! g g g-> r r4 |
     c-> c'4.-> c,8 g'[ c] | c, c c c g' g a c | c,4 c' c,8 c g' c ~ | 
-    c c-> r c a a g e | c4 c' c,8 c cs d ~ | d a' d a d r d,-> f,-> ~ | \break
+    c c-> r c a a g e | c4 c' c,8 c cs d ~ | d a' d a d r d,-> f,-> ~ | %\break
     f2 \fermata \caesura r2 | c'-> \glissando c' \fermata |
     << { \voiceOne c,4_> d\rest } \\ { \voiceTwo \hideNotes c4 \glissando c,4 \unHideNotes } >> r2 |
     \bar "|."

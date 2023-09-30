@@ -39,7 +39,7 @@ ReedOneNumberTwo = \relative c'' {
     >>
     R1 * 8 | \bar "||" %\break
     e1 \play \mp | 
-    fs2. |  
+    fs |  
     << { \voiceOne \stemDown 
            e2 ~ e8 a( \mf gs a | 
            cs,1) 

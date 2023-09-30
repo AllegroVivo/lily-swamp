@@ -29,7 +29,7 @@ number-one-setup = {
 }
 number-two-setup = {
     \main-setup
-    \key a \major \time 4/4
+    \key b \major \time 4/4
 }
 number-two-a-setup = {
     \main-setup

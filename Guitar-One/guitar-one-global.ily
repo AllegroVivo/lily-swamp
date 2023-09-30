@@ -18,6 +18,23 @@ StlStrAc = ^\markup {
     \override #'(box-padding . 0.5) \box
     "Steel String Acoustic"
 }
+Ukulele = ^\markup { 
+    \general-align #X #-0.7
+    \bold 
+    \override #'(box-padding . 0.5) \box
+    "Ukulele"
+}
+
+ToElectric = ^"(to Electric)"
+ToStlStg = ^"(to Steel String Acoustic)"
+ToUkulele = ^"(to Ukulele)"
+
+%------------%
+% Techniques %
+%------------%
+DistEighthDelay = ^\markup { \translate #'(-1.5 . 0) \small \bold \italic "Dist. 8th note delay" }
+FullVoice = ^\markup { \translate #'(-1 . 0) \bold \italic "full voicing" }
+AddTrem = ^\markup { \translate #'(-1 . 0) \bold \italic "add tremolo" }
 
 %------------------%
 % Initial Settings %

@@ -87,13 +87,13 @@
                      \ReedTwoBigBrightBeautiful
                  >>
                  \new StaffGroup <<
-                     %\HornBigBrightBeautiful
-                     %\TrumpetBigBrightBeautiful
-                     %\TromboneBigBrightBeautiful
+                     \HornBigBrightBeautiful
+                     \TrumpetBigBrightBeautiful
+                     \TromboneBigBrightBeautiful
                  >>
                  \new StaffGroup <<
-                     %\GuitarOneBigBrightBeautiful
-                     %\GuitarTwoBigBrightBeautiful
+                     \GuitarOneBigBrightBeautiful
+                     \GuitarTwoBigBrightBeautiful
                  >>
                  \new StaffGroup <<
                      %\PercussionBigBrightBeautiful
@@ -109,8 +109,6 @@
                      \BassBigBrightBeautiful
                  >>
             >>
-            \layout {
-            }
         } 
     }
 }

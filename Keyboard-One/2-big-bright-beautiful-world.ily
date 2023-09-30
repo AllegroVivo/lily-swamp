@@ -34,10 +34,10 @@ KeyboardOneNumberTwoRH = \relative c'' {
     r8 e <a e'>[ e] r e <a e'>4 | r8 e <a e'>[ e] r e <a e'>4 |
     r4 d,4( g d) | r b( <e b'>2) | \bar "||" \break
     \set tieWaitForNote = ##t
-    << { \voiceOne \grace { a16 \mf e'_~ } < a, e' a>1-> ~ | <e' a>4. r8 r2 | } 
+    << { \voiceOne < a e' a>1-> ~ | <e' a>4. r8 r2 | } 
        \\ { \voiceTwo a,4. a8 ~ a2 | d4. e,8( fs gs a b)} >> \oneVoice
     cs8^( e, a cs ~ cs a gs a) ~ | a1 | \break
-    << { \voiceOne \grace { a16 \mf d!_~ } < a d a'>1-> | } 
+    << { \voiceOne  < a d a'>1-> | } 
        \\ { \voiceTwo a4. a8 ~ a2 | } >> \oneVoice
     <a e'>4. a8 ~ a2 | <a d e>1 | \time 3/4 R2. | \time 4/4 \break
     R1 * 3 | \bar "||" \break

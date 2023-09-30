@@ -4,13 +4,15 @@
 \include "2-big-bright-beautiful-world.ily"
 
 BassOverture = {
-    \new Staff \with { instrumentName = "Bass" } {
-        \BassNumberOne
-    }
+    \new Staff \with {
+        instrumentName = "Bass"
+        shortInstrumentName = "Bs. "
+    } { \BassNumberOne }
 }
 
 BassBigBrightBeautiful = {
-    \new Staff \with { instrumentName = "Bass" } {
-        \BassNumberTwo
-    }
+    \new Staff \with {
+        instrumentName = "Bass"
+        shortInstrumentName = "Bs. "
+    } { \BassNumberTwo }
 }

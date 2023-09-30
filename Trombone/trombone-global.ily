@@ -10,8 +10,17 @@ TenorTbn = ^\markup {
     \general-align #X #-0.7
     \bold 
     \override #'(box-padding . 0.5) \box
-    "Tenor"
+    "Tenor Trombone"
 }
+BassTbn = ^\markup { 
+    \general-align #X #-0.7
+    \bold 
+    \override #'(box-padding . 0.5) \box
+    "Bass Trombone"
+}
+
+ToTnTbn = ^"(to Tenor Trombone)"
+ToBsTbn = ^"(to Bass Trombone)"
 
 %------------------%
 % Initial Settings %
