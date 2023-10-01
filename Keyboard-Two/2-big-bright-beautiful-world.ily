@@ -46,6 +46,28 @@ KeyboardTwoNumberTwoRH = \relative c'' {
     r4 \CelLoco <a' b e>2. \mp | 
     R1 | \bar "||" \break 
     R1 * 4 | \break
+    R1 * 2 |
+    r2 r4 \HarpWithLine <fs cs'>( \solo \mf |
+    <cs a'>2 <a fs'>) |
+    <cs, fs cs'>1 |
+    <d e>2 r | \bar "||" \break
+    r4 cs'-- \ScnStgsWithLine \mp b8( a fs) a( ~ |
+    a b4.) ~ b2 |
+    << 
+        { \voiceOne a2.-> _~ \mf a8 a( | \break fs'1) } 
+        \\
+        { \voiceTwo s1 | b,2( \> a) \! }
+    >> \oneVoice
+    R1 * 2 | \bar "||" \break
+    r4 <a cs>-. \Oboe _\markup { \dynamic "mf" \italic "litely" } e'-. a,-. |
+    <b fs'>-. r r2 |
+    r4 <a d!>-. <d fs>-. a-. |
+    <a cs>-. r r2 | \break
+     r4 <a cs>-. e'-. a,-. |
+    <b fs'>-. r r2 |
+    R1 | 
+    r2 \CelLoco <d d'>2 \mf | \bar "||" \key g \major \break
+    R1 * 2 |
     
 }
 
