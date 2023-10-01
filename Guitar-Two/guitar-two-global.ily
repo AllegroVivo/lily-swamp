@@ -16,7 +16,7 @@ NylStrAc = ^\markup {
     \general-align #X #-0.7
     \bold 
     \override #'(box-padding . 0.5) \box
-    "Nylon String Acoustic"
+    "Nylon Acoustic"
 }
 Mandolin = ^\markup { 
     \general-align #X #-0.7
@@ -24,6 +24,18 @@ Mandolin = ^\markup {
     \override #'(box-padding . 0.5) \box
     "Mandolin"
 }
+SteelStrAc = ^\markup { 
+    \general-align #X #-0.7
+    \bold 
+    \override #'(box-padding . 0.5) \box
+    "Steel Acoustic"
+}
+
+ToSteelAc = ^"(to Steel Acoustic)"
+ToElectric = ^"(to Electric)"
+
+dist = ^\markup { \bold \italic "w/ dist." }
+chorus = ^\markup { \bold \italic "Add Chorus" }
 
 %------------------%
 % Initial Settings %

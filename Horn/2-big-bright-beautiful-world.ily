@@ -110,6 +110,8 @@ HornNumberTwo = \relative c'' {
     e c4-> \ff r | \bar "||" \key a \major %\break
     R1 * 3 |
     r2 r4 fs,8-> \f gs-> |
+    a2-> e'-> |
+    ds2.-> fs,8-> gs-> |
     a2-> d-> |
     cs1-> \fp | %\break
     R1 |

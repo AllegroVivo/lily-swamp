@@ -4,13 +4,15 @@
 \include "2-big-bright-beautiful-world.ily"
 
 GuitarTwoOverture = {
-    \new Staff \with { instrumentName = "Guitar II" } {
-        \GuitarTwoNumberOne
-    }
+    \new Staff \with { 
+        instrumentName = "Guitar II" 
+        shortInstrumentName = "Gtr. II "
+    } { \GuitarTwoNumberOne }
 }
 
 GuitarTwoBigBrightBeautiful = {
-    \new Staff \with { instrumentName = "Guitar II" } {
-        \GuitarTwoNumberTwo
-    }
+    \new Staff \with {
+        instrumentName = "Guitar II"
+        shortInstrumentName = "Gtr. II "
+    } { \GuitarTwoNumberTwo }
 }

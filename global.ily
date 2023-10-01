@@ -15,6 +15,8 @@ subp = _\markup { \translate #'(-1 . 0) \italic "sub." \dynamic "p" }
 sim = ^\markup { \translate #'(-2 . 0) \italic "sim." }
 lv = ^\markup { \translate #'(-0.5 . 0) \italic "l.v." }
 
+swing = ^\markup { \translate #'(-1 . 0)  \small \bold \italic "Swing 8ths" }
+
 ten = ^\markup { \general-align #X #-0.5  \italic "ten." }
 arco = ^\markup { \general-align #X #-0.5  \bold \italic "arco" }
 pizz = ^\markup { \general-align #X #-0.5  \bold \italic "pizz." }

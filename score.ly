@@ -96,7 +96,7 @@
                      \GuitarTwoBigBrightBeautiful
                  >>
                  \new StaffGroup <<
-                     %\PercussionBigBrightBeautiful
+                     \PercussionBigBrightBeautiful
                      %\new DrumStaff \with { instrumentName = "Drums" }
                      << >>  % TODO: Drums
                  >>

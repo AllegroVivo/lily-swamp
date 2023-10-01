@@ -7,11 +7,29 @@
 % Instrument Names %
 %------------------%
 %%%%%%%%% Single Line Instruments %%%%%%%%%
+Bassoon = ^\markup { 
+    \general-align #X #-0.7
+    \bold 
+    \override #'(box-padding . 0.5) \box
+    "BASSOON"
+}
 Harpsichord = ^\markup { 
     \general-align #X #-0.7
     \bold 
     \override #'(box-padding . 0.5) \box
-    "Harpsichord"
+    "HARPSICHORD"
+}
+Oboe = ^\markup { 
+    \general-align #X #-0.7
+    \bold 
+    \override #'(box-padding . 0.5) \box
+    "OBOE"
+}
+ScnStgs = ^\markup { 
+    \translate #'(-1 . 1)
+    \bold 
+    \override #'(box-padding . 0.5) \box
+    "SECTION STRINGS"
 }
 
 %%%%%%%%%%%% Multiline Instruments %%%%%%%%%%%%
@@ -20,10 +38,23 @@ PzBs = ^\markup \column {
         \general-align #X #-0.7
         \bold 
         \override #'(box-padding . 0.5) \box
-        "Pizz. Bass"
+        "PIZZ. BASS"
     }
     \line { \italic "(sounds where written)" }
 }
+CelLoco =  ^\markup 
+            \translate #'(-5 . 0) 
+            \box
+            \bold 
+            \override #'(line-width . 5) 
+            \wordwrap { "CELESTE" "(sounds loco)" }
+            
+FltGlock = ^\markup 
+            \translate #'(-5 . 0) 
+            \box
+            \bold 
+            \override #'(line-width . 5) 
+            \wordwrap { "FLUTE (sounds 8vb) +" "GLOCK (sounds loco)" }
 
 %------------------%
 % Initial Settings %
