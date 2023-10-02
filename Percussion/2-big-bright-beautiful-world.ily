@@ -153,10 +153,10 @@ PercussionNumberTwo = \relative c'' {
     \xNote f4^> r r2 | \bar "|."
 }
 
-\score {
-    \new Staff \with { 
-        \consists Balloon_engraver 
-        \override BalloonTextItem.annotation-balloon = ##f 
-    }
-    { \PercussionNumberTwo }
-}
+% \score {
+%     \new Staff \with { 
+%         \consists Balloon_engraver 
+%         \override BalloonTextItem.annotation-balloon = ##f 
+%     }
+%     { \PercussionNumberTwo }
+% }

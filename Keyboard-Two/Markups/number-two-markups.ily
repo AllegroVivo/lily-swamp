@@ -1,13 +1,8 @@
-\version "2.24.2"
-\language "english"
-
-\include "../global.ily"
-
 %------------------%
 % Instrument Names %
 %------------------%
 Bassoon = ^\markup { 
-    \general-align #X #-0.7
+    \translate #'(-1 . 1)
     \bold 
     \override #'(box-padding . 0.5) \box
     "BASSOON"
@@ -24,9 +19,15 @@ BriteRkPnoLine = ^\markup \translate #'(-6 . 4) {
 
 CelLoco =  ^\markup {
     \translate #'(-5 . 4.5) 
-    \box
+    \override #'(box-padding . 1) \box
     \override #'(line-width . 5) 
     \wordwrap { \bold "CELESTE" \italic "(sounds loco)" }
+}
+
+CelSoundsup =  ^\markup {
+    \override #'(box-padding . 0.7) \box
+    \override #'(line-width . 5) 
+    \wordwrap { \center-align \bold "CELESTE" \center-align \italic "(sounds 24va)" }
 }
 
 FastStrLine = ^\markup \translate #'(-2.5 . 3) {
@@ -40,9 +41,16 @@ FastStrLine = ^\markup \translate #'(-2.5 . 3) {
 FltGlock = ^\markup {
     \translate #'(-5 . 0) 
     \box
-    \bold 
+    \override #'(box-padding . 1) \bold 
     \override #'(line-width . 5) 
     \wordwrap { "FLUTE (sounds 8vb) +" "GLOCK (sounds loco)" }
+}
+
+HpGliss = ^\markup { 
+    \translate #'(2 . 2)
+    \bold 
+    \override #'(box-padding . 1) \box
+    "HARP GLISS"
 }
 
 HarpWithLine = ^\markup \translate #'(-6 . 4) {
@@ -54,11 +62,11 @@ HarpWithLine = ^\markup \translate #'(-6 . 4) {
     \arrow #"closed" ##f #Y #UP #15.5 #0.1
 }
 
-Harpsichord = ^\markup { 
-    \general-align #X #-0.7
+MarcHn = ^\markup { 
+    \translate #'(-1 . 1)
     \bold 
-    \override #'(box-padding . 0.5) \box
-    "HARPSICHORD"
+    \override #'(box-padding . 1) \box
+    "MARC. HN."
 }
 
 MarcTpt = ^\markup { 
@@ -69,20 +77,10 @@ MarcTpt = ^\markup {
 }
 
 Oboe = ^\markup { 
-    \general-align #X #-0.7
+    \translate #'(-2 . 2)
     \bold 
     \override #'(box-padding . 0.5) \box
     "OBOE"
-}
-
-PzBs = ^\markup \column { 
-    \line {
-        \general-align #X #-0.7
-        \bold 
-        \override #'(box-padding . 0.5) \box
-        "PIZZ. BASS"
-    }
-    \line { \italic "(sounds where written)" }
 }
 
 ScnStgs = ^\markup { 
@@ -91,6 +89,7 @@ ScnStgs = ^\markup {
     \override #'(box-padding . 0.5) \box
     "SECTION STRINGS"
 }
+
 ScnStgsWithLine = ^\markup \translate #'(-10 . 3) {
     \override #'(box-padding . 1)
     \box \bold "SECTION STRINGS"
@@ -98,61 +97,23 @@ ScnStgsWithLine = ^\markup \translate #'(-10 . 3) {
     \translate #'(-18 . -15)
     \arrow #"closed" ##f #Y #DOWN #14 #0.1
 }
+
+TbnScn = ^\markup { 
+    \translate #'(-2 . 1)
+    \bold 
+    \override #'(box-padding . 1) \box
+    "TBN. SECTION"
+}
+
 TptScn = ^\markup { 
     \translate #'(-1 . 1)
     \bold 
     \override #'(box-padding . 1) \box
     "TPT. SECTION"
 }
-            
-%------------------%
-% Initial Settings %
-%------------------%
-main-setup = {
-    \set Staff.printKeyCancellation = ##f
-    \set Staff.ottavationMarkups = #ottavation-ordinals
-    \set Staff.pedalSustainStrings = #'("Ped." "Ped." "")
-    \set countPercentRepeats = ##t
-    \override Staff.PianoPedalBracket.to-barline = ##t
-    \override Glissando.style = #'trill
-    \numericTimeSignature
-}
-number-one-setup = {
-    \main-setup
-    \key g \major \time 4/4
-}
-number-two-setup = {
-    \main-setup
-    \key a \major \time 4/4
-}
-number-two-a-setup = {
-    \main-setup
-    \key c \major \time 4/4
-}
-number-three-setup = {
-    \main-setup
-    \key af \major \time 4/4
-}
-number-three-a-setup = {
-    \main-setup
-    \key c \major \time 4/4
-}
-number-three-b-setup = {
-    \main-setup
-    \key g \major \time 4/4
-}
-number-four-setup = {
-    \main-setup
-    \key c \major \time 4/4
-}
-number-four-a-setup = {
-    \main-setup
-    \key g \major \time 4/4
-}
 
-%------------%
-% Techniques %
-%------------%
-OctaveDown = \set Staff.ottavation = #"8vb"
-OctaveUp = \set Staff.ottavation = #"8va"
-OctaveNorm = \set Staff.ottavation = #0
+%---------------%
+% Other Markups %
+%---------------%
+
+gmaj = ^\markup \translate #'(10 . 0) { \small \bold \italic "G Maj." }

@@ -101,11 +101,11 @@
                      << >>  % TODO: Drums
                  >>
                  \KeyboardOneBigBrightBeautiful
-                 %\KeyboardTwoBigBrightBeautiful
+                 \KeyboardTwoBigBrightBeautiful
                  \new StaffGroup <<
-                     %\ViolinOneBigBrightBeautiful
-                     %\ViolinTwoBigBrightBeautiful
-                     %\CelloBigBrightBeautiful
+                     \ViolinOneBigBrightBeautiful
+                     \ViolinTwoBigBrightBeautiful
+                     \CelloBigBrightBeautiful
                      \BassBigBrightBeautiful
                  >>
             >>

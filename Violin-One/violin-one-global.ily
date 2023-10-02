@@ -19,6 +19,9 @@ number-one-setup = {
 number-two-setup = {
     \main-setup
     \key a \major \time 4/4
+    \override Glissando.style = #'trill
+    \override Glissando.breakable = ##t
+    \override Glissando.after-line-breaking = ##t
 }
 number-two-a-setup = {
     \main-setup

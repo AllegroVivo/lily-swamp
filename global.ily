@@ -2,33 +2,38 @@
 
 \include "Externals/arrows.ily"
 
-%------------------%
-% Special Dynamics %
-%------------------%
+%----------%
+% Dynamics %
+%----------%
 sfzf = _\markup { \translate #'(-1 . 0) \dynamic "sfz-f" }
 sffz = _\markup { \translate #'(-1 . 0) \dynamic "sffz" }
-dolce = _\markup { \translate #'(-0.5 . 0) \italic "dolce" }
 
 subp = _\markup { \translate #'(-1 . 0) \italic "sub." \dynamic "p" }
+
+mfeasily = _\markup { \translate #'(-1.5 . 0) \dynamic "mf" \small \bold \italic "easily" }
 
 %------------%
 % Techniques %
 %------------%
 sim = ^\markup { \translate #'(-2 . 0) \italic "sim." }
 lv = ^\markup { \translate #'(-0.5 . 0) \italic "l.v." }
+dolce = ^\markup { \translate #'(-0.5 . 0) \small \bold \italic "dolce" }
+espr = ^\markup { \translate #'(-1 . 0) \small \bold \italic "espressivo" }
 
 swing = ^\markup { \translate #'(-1 . 0)  \small \bold \italic "Swing 8ths" }
+straight = ^\markup { \translate #'(-1 . 0) \small \bold \italic "Straight 8ths" }
 
 ten = ^\markup { \general-align #X #-0.5  \italic "ten." }
 arco = ^\markup { \general-align #X #-0.5  \bold \italic "arco" }
 pizz = ^\markup { \general-align #X #-0.5  \bold \italic "pizz." }
+tip = ^\markup { \translate #'(-1 . 0) \small \bold \italic "at the tip" }
 
 solo = ^\markup { \general-align #X #-0.5  \bold \italic "solo" }
 soli = ^\markup { \general-align #X #-0.5  \bold \italic "soli" }
 play = ^\markup { \general-align #X #-0.5  \bold "PLAY" }
 
-csord = ^\markup { \translate #'(-1 . 0) \italic "con sord." }
-ssord = ^\markup { \translate #'(-1 . 0) \italic "senza sord." }
+csord = ^\markup { \translate #'(-1 . 0) \small \bold \italic "con sord." }
+ssord = ^\markup { \translate #'(-1 . 0) \small \bold \italic "senza sord." }
 
 strMute = ^\markup { \translate #'(-1 . 0) \bold \italic "Str. Mute" }
 cupMute = ^\markup { \translate #'(-1 . 0) \bold \italic "Cup Mute" }
@@ -71,3 +76,16 @@ HideNH = {
     \RevertNH
     \override NoteHead.transparent = ##t
 }
+
+
+%-----------%
+% Functions %
+%-----------%
+DrawGlissSpan = #(define-music-function (shift pad) (pair? number?) #{
+    \once \override TextSpanner.style = #'line
+    \once \override TextSpanner.bound-details.left.padding = #'1
+    \once \override TextSpanner.bound-details.right.padding = #1
+    \once \override TextSpanner.extra-offset = #shift 
+    \override TextSpanner.bound-details.right.Y = #pad
+    \once \override TextSpanner.bound-details.right.text = #'()
+#})
