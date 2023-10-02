@@ -8,7 +8,9 @@
 sfzf = _\markup { \translate #'(-1 . 0) \dynamic "sfz-f" }
 sffz = _\markup { \translate #'(-1 . 0) \dynamic "sffz" }
 
-subp = _\markup { \translate #'(-1 . 0) \italic "sub." \dynamic "p" }
+subp = _\markup { \translate #'(-1 . 0) \small \bold \italic "sub." \dynamic "p" }
+
+mpdolce = _\markup { \translate #'(-1 . 0) \dynamic "mp" \small \bold \italic "dolce" }
 
 mfeasily = _\markup { \translate #'(-1.5 . 0) \dynamic "mf" \small \bold \italic "easily" }
 

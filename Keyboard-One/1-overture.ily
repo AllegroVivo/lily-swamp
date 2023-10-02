@@ -2,17 +2,18 @@
 \language "english"
 
 \include "keyboard-one-global.ily"
-\include "Instruments/1-overture.ily"
-\include "Techniques/1-overture.ily"
-\include "Dynamics/1-overture.ly"
+\include "Markups/1-overture.ly"
+\include "Chords/1-overture.ily"
 
 KeyboardOneNumberOneRH = \relative c''' {
     \number-one-setup
- 
-    <g d'>2-> \PortOrg \f q4-> q-> ~ | q2 q4-> q->( | <g c>2.) <g b>4-- | <d g>( d) _~ <d fs>( d) | \break
+    
+    <g d'>2-> \PortOrg \fa q4-> q-> ~ | 
+    q2 q4-> q->( | <g c>2.) <g b>4-- | 
+    <d g>( d) _~ <d fs>( d) | \break
     R1 |
-    r2 d4_\markup { \bold \italic "G Major Scale" } \glissando \Harp
-    \ffa \afterGrace d'' \glissando { \hideNotes e,, \unHideNotes } |
+    r2 d4 \glissando \Harp \GMajScl \ffa
+    \afterGrace d'' \glissando { \hideNotes e,, \unHideNotes } |
     \revert DynamicLineSpanner.outside-staff-priority
     \revert DynamicText.X-offset
     R1 | \break
@@ -22,6 +23,7 @@ KeyboardOneNumberOneRH = \relative c''' {
     R1 * 4 | \break
     \bar "||" \key a \major
     R1 * 4 | \bar "|."
+    
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -32,7 +34,7 @@ KeyboardOneNumberOneLH = \relative c'' {
     <g d'>2-> q4-> <g fs'>->( | <c e>2) q4-> d->( | a2.) g4-- | d2 d |
     R1 * 3 | \clef bass
     c,4.-> \BsClar g8 b4.-> fs8-. | c'8-> r r4 r2 \fermata |
-    g2._\markup { \dynamic "mp" \italic "dolce" } \PzBs r4 | R1 | g2. r4 | R1 |
+    g2.\mpdolce \dolcesww \PizzBs r4 | R1 | g2. r4 | R1 |
     \key a \major
     R1 * 4 |
 }
@@ -42,6 +44,7 @@ KeyboardOneNumberOneLH = \relative c'' {
 \score {
     \new PianoStaff <<
         \new Staff { \KeyboardOneNumberOneRH }
+        \new ChordNames { \KeyboardOneNumberOneChords }
         \new Staff { \KeyboardOneNumberOneLH }
     >>
     \layout {
