@@ -6,8 +6,9 @@ echo =================================
 echo. 
 
 echo Adding updated files to Git...
-echo.
 git add *
+echo ... Done!
+echo...
 
 echo Committing updates...
 echo.
