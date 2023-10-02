@@ -2,18 +2,17 @@
 \language "english"
 
 \include "keyboard-one-global.ily"
+\include "Instruments/1-overture.ily"
+\include "Techniques/1-overture.ily"
+\include "Dynamics/1-overture.ly"
 
 KeyboardOneNumberOneRH = \relative c''' {
     \number-one-setup
  
-    <g d'>2-> q4-> q-> ~ | q2 q4-> q->( | <g c>2.) <g b>4-- | <d g>( d) _~ <d fs>( d) | \break
+    <g d'>2-> \PortOrg \f q4-> q-> ~ | q2 q4-> q->( | <g c>2.) <g b>4-- | <d g>( d) _~ <d fs>( d) | \break
     R1 |
-    \once \override TextScript.X-offset = #12
-    r2 \Harp
-    \override DynamicLineSpanner.outside-staff-priority = #300
-    \override DynamicText.X-offset = #-7
-    d4_\markup { \bold \italic "G Major Scale" } \glissando
-    \ff \afterGrace d'' \glissando { \hideNotes e,, \unHideNotes } |
+    r2 d4_\markup { \bold \italic "G Major Scale" } \glissando \Harp
+    \ffa \afterGrace d'' \glissando { \hideNotes e,, \unHideNotes } |
     \revert DynamicLineSpanner.outside-staff-priority
     \revert DynamicText.X-offset
     R1 | \break
@@ -30,7 +29,7 @@ KeyboardOneNumberOneRH = \relative c''' {
 KeyboardOneNumberOneLH = \relative c'' {
     \number-one-setup \clef treble
     
-    <g d'>2-> \PortOrg ^\f q4-> <g fs'>->( | <c e>2) q4-> d->( | a2.) g4-- | d2 d |
+    <g d'>2-> q4-> <g fs'>->( | <c e>2) q4-> d->( | a2.) g4-- | d2 d |
     R1 * 3 | \clef bass
     c,4.-> \BsClar g8 b4.-> fs8-. | c'8-> r r4 r2 \fermata |
     g2._\markup { \dynamic "mp" \italic "dolce" } \PzBs r4 | R1 | g2. r4 | R1 |
@@ -40,12 +39,12 @@ KeyboardOneNumberOneLH = \relative c'' {
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% \score {
-%     \new PianoStaff <<
-%         \new Staff { \KeyboardOneNumberOneRH }
-%         \new Staff { \KeyboardOneNumberOneLH }
-%     >>
-%     \layout {
-%         
-%     }
-% }
+\score {
+    \new PianoStaff <<
+        \new Staff { \KeyboardOneNumberOneRH }
+        \new Staff { \KeyboardOneNumberOneLH }
+    >>
+    \layout {
+        
+    }
+}

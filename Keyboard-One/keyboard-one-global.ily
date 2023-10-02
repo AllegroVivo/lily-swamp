@@ -147,11 +147,14 @@ main-setup = {
     \override Staff.PianoPedalBracket.to-barline = ##t
     \override Glissando.style = #'trill
     \numericTimeSignature
+    \override DynamicText.Y-offset = #10
 }
 number-one-setup = {
     \main-setup
     \key g \major \time 4/4
     \tempo \markup { \large "In 4-Heroic and Very Loud" }
+    \override Score.NonMusicalPaperColumn.line-break-system-details = 
+    #'((alignment-distances . (12)))
 }
 number-two-setup = {
     \main-setup
