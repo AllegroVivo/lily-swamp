@@ -18,4 +18,5 @@ echo.
 git push
 
 echo Operation Complete!
+echo.
 pause
