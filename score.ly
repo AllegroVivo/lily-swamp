@@ -80,35 +80,75 @@
             }
             footer = "Orchestrations by Danny Troob"
         }
-        \score {
-            <<
-                 \new StaffGroup <<
-                     \ReedOneBigBrightBeautiful
-                     \ReedTwoBigBrightBeautiful
-                 >>
-                 \new StaffGroup <<
-                     \HornBigBrightBeautiful
-                     \TrumpetBigBrightBeautiful
-                     \TromboneBigBrightBeautiful
-                 >>
-                 \new StaffGroup <<
-                     \GuitarOneBigBrightBeautiful
-                     \GuitarTwoBigBrightBeautiful
-                 >>
-                 \new StaffGroup <<
-                     \PercussionBigBrightBeautiful
-                     %\new DrumStaff \with { instrumentName = "Drums" }
-                     << >>  % TODO: Drums
-                 >>
-                 \KeyboardOneBigBrightBeautiful
-                 \KeyboardTwoBigBrightBeautiful
-                 \new StaffGroup <<
-                     \ViolinOneBigBrightBeautiful
-                     \ViolinTwoBigBrightBeautiful
-                     \CelloBigBrightBeautiful
-                     \BassBigBrightBeautiful
-                 >>
-            >>
-        } 
+        % \score {
+%             <<
+%                  \new StaffGroup <<
+%                      \ReedOneBigBrightBeautiful
+%                      \ReedTwoBigBrightBeautiful
+%                  >>
+%                  \new StaffGroup <<
+%                      \HornBigBrightBeautiful
+%                      \TrumpetBigBrightBeautiful
+%                      \TromboneBigBrightBeautiful
+%                  >>
+%                  \new StaffGroup <<
+%                      \GuitarOneBigBrightBeautiful
+%                      \GuitarTwoBigBrightBeautiful
+%                  >>
+%                  \new StaffGroup <<
+%                      \PercussionBigBrightBeautiful
+%                      %\new DrumStaff \with { instrumentName = "Drums" }
+%                      << >>  % TODO: Drums
+%                  >>
+%                  \KeyboardOneBigBrightBeautiful
+%                  \KeyboardTwoBigBrightBeautiful
+%                  \new StaffGroup <<
+%                      \ViolinOneBigBrightBeautiful
+%                      \ViolinTwoBigBrightBeautiful
+%                      \CelloBigBrightBeautiful
+%                      \BassBigBrightBeautiful
+%                  >>
+%             >>
+%         } 
+    }
+    \bookpart {
+        \header {
+            title = "2A. After Big Bright Beautiful World"
+            composer = \markup \column { 
+                \line { "Music & Lyrics by:" }
+                \line { \italic "Jeneanne Tessori" }
+            }
+            footer = "Orchestrations by Danny Troob"
+        }
+        % \score {
+%             <<
+%                  \new StaffGroup <<
+%                      \ReedOneAfterBigBrightBeautiful
+%                      \ReedTwoAfterBigBrightBeautiful
+%                  >>
+%                  \new StaffGroup <<
+%                      \HornAfterBigBrightBeautiful
+%                      \TrumpetAfterBigBrightBeautiful
+%                      \TromboneAfterBigBrightBeautiful
+%                  >>
+%                  \new StaffGroup <<
+%                      \GuitarOneAfterBigBrightBeautiful
+%                      \GuitarTwoAfterBigBrightBeautiful
+%                  >>
+%                  \new StaffGroup <<
+%                      \PercussionAfterBigBrightBeautiful
+%                      %\new DrumStaff \with { instrumentName = "Drums" }
+%                      << >>  % TODO: Drums
+%                  >>
+%                  \KeyboardOneAfterBigBrightBeautiful
+%                  \KeyboardTwoAfterBigBrightBeautiful
+%                  \new StaffGroup <<
+%                      \ViolinOneAfterBigBrightBeautiful
+%                      \ViolinTwoAfterBigBrightBeautiful
+%                      \CelloAfterBigBrightBeautiful
+%                      \BassAfterBigBrightBeautiful
+%                  >>
+%             >>
+%         } 
     }
 }

@@ -21,6 +21,7 @@ sim = ^\markup { \translate #'(-2 . 0) \italic "sim." }
 lv = ^\markup { \translate #'(-0.5 . 0) \italic "l.v." }
 dolce = ^\markup { \translate #'(-0.5 . 0) \small \bold \italic "dolce" }
 espr = ^\markup { \translate #'(-1 . 0) \small \bold \italic "espressivo" }
+loco = ^\markup { \translate #'(-1 . 0) \small \bold \italic "(loco)" }
 
 swing = ^\markup { \translate #'(-1 . 0)  \small \bold \italic "Swing 8ths" }
 straight = ^\markup { \translate #'(-1 . 0) \small \bold \italic "Straight 8ths" }

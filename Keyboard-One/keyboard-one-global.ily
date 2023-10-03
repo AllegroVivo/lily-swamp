@@ -28,6 +28,9 @@ number-two-setup = {
     \main-setup
     \key a \major \time 4/4
     \tempo \markup { \large "Gently" }
+    \override Score.NonMusicalPaperColumn.line-break-system-details = 
+    #'((alignment-distances . (13)))
+    \override DynamicText.Y-offset = #-4
 }
 number-two-a-setup = {
     \main-setup

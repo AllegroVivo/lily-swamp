@@ -1,11 +1,15 @@
+\include "../../Externals/arrows.ily"
+
 %------------------------%
 % Instrument Definitions %
 %------------------------%
-BsClar = _\markup { 
-    \translate #'(-3 . 0)
-    \bold 
-    \override #'(box-padding . 1) \box
-    "BS. CLARINET"
+CelesteA = ^\markup \translate #'(-3.5 . 3) {
+    \override #'(box-padding . 1)
+    \override #'(line-width . 5)
+    \box \bold "CELESTE" 
+    \with-dimensions #'(0 . 0) #'(0 . 0)
+    \translate #'(-11 . -18.8)
+    \arrow #"closed" ##f #Y #DOWN #17.5 #0.1
 }
 
 Harp = ^\markup { 
@@ -13,27 +17,6 @@ Harp = ^\markup {
     \bold 
     \override #'(box-padding . 1) \box
     "HARP"
-}
-
-MarcHorns = ^\markup { 
-    \general-align #X #-0.7
-    \bold 
-    \override #'(box-padding . 1) \box
-    "MARCATO HORNS"
-}
-
-PortOrg = ^\markup { 
-    \translate #'(-3 . 6)
-    \bold 
-    \override #'(box-padding . 1) \box
-    "PORTATIVE ORGAN"
-}
-
-PizzBs = ^\markup { 
-    \translate #'(-3 . 3.5)
-    \bold 
-    \override #'(box-padding . 1) \box
-    "PIZZ BASS"
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

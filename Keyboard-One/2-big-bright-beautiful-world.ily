@@ -2,21 +2,19 @@
 \language "english"
 
 \include "keyboard-one-global.ily"
+%\include "Chords/2-big-bright-beautiful-world.ily"
+\include "Markups/2-big-bright-beautiful-world.ily"
 
 KeyboardOneNumberTwoRH = \relative c'' {
     \number-two-setup
  
-    \override Slur.positions = #'(5 . 5)
-    \override Slur.ratio = #3
     \OctaveUp \ottava #1
-    r8 e'( <a e'>[ e]) r e( <a e'>[ e]) | r e( <a e'>[ e]) r e( <a e'>[ e]) |
+    r8 \CelesteA e'( <a e'>[ e]) r e( <a e'>[ e]) | 
+    r e( <a e'>[ e]) r e( <a e'>[ e]) |
     \ottava #0
-    \revert Slur.positions
     \tempo \markup { \large "Safety" }
-    \repeat volta 2 {
-        r8^\markup { \italic "(loco)" } e,,( <a e'>[ e]) r e( <a e'>[ e]) | 
-        r e( <a e'>[ e]) r e( <a e'>4) |
-    } \break
+    r8 e,,( <a e'>[ e]) r e( <a e'>[ e]) | 
+    r e( <a e'>[ e]) r e( <a e'>4) | \break
     \repeat unfold 4 {
         r8 a e'([ a,)] r a( e'4) |
     } \break
@@ -26,7 +24,7 @@ KeyboardOneNumberTwoRH = \relative c'' {
     r4 g,8^( a b a g a) | r4 e8( as b4 e,) | \break
     r4 r8 fs( <a cs>2) | r4 r8 e( <gs cs>2) | <ds fs a b>1 ~ | q | \break
     r4 fs8 a ~ a2 |
-    \ottava #1 <e'' a b e>1 \Celeste \mf \ottava #0
+    \ottava #1 <e'' a b e>1 \mf \ottava #0
     R1 * 2 | \bar "||" \break
     r4 r8 a,,( ~ a d e4 ~ | e4.) a,8( ~ a cs a4) | 
     r4 r8 a( ~ a d e4 ~ | e4.) a,8( ~ a cs a4) | \break
@@ -41,9 +39,9 @@ KeyboardOneNumberTwoRH = \relative c'' {
        \\ { \voiceTwo a4. a8 ~ a2 | } >> \oneVoice
     <a e'>4. a8 ~ a2 | <a d e>1 | \time 3/4 R2. | \time 4/4 \break
     R1 * 3 | \bar "||" \break
-    R1 \mp | <d, b'>4-- \< \ClrVibes <fs d'>-- <a fs'>-- <d a'>-- | <e b'>1( \mf <fs cs'>) | \break
+    R1 \mp | <d, b'>4-- \< <fs d'>-- <a fs'>-- <d a'>-- | <e b'>1( \mf <fs cs'>) | \break
     \revert Slur.ratio
-    <e a cs>-> | R1 | <a, b e> | R1 | r8 \Piano a,8( e'[ a,]) r a( e'4) | \bar "||" \break
+    <e a cs>-> | R1 | <a, b e> | R1 | r8 a,8( e'[ a,]) r a( e'4) | \bar "||" \break
     \repeat unfold 3 { r8 a,( e' a,) r a( e'4) | }
     r8 a,( e' a) r a,( e'4)
     \repeat unfold 2 { r8 a,( e' a,) r a( e'4) | }
@@ -62,7 +60,7 @@ KeyboardOneNumberTwoRH = \relative c'' {
     r4 <e g c!>-. q-. q-. | <d g b>-. q-. q-. q-. | r4 <e g cs>-. q-. q-. | <d fs a d>-. r r <c d>-. | \break
     r4 <d g b>-. q-. q-. | <e g c>-. q-. q-. q-- | r4 <d g b>-. q-. q-. | <e g cs>-. q-. <e a cs>-. q-- | \break
     r4 <e g c!>-. q-. q-. | <d g b>-. q-. q-. q-. | r4 <e g cs>-. q-. q-. | <d fs a d>^^ r r2 | \break
-    <d' g>1:32 \mp \TrmStr | <cs e>:32 | <c! e>:32 | R1 | \break
+    <d' g>1:32 \mp | <cs e>:32 | <c! e>:32 | R1 | \break
     \bar "||" \key bf \major \slurUp
     \override DynamicText.X-offset = #-3
     \repeat unfold 2 { <d, f! a>4( \mf a) <d f a>( a) | <c f a>( a) <c f a>( a) } | \break
@@ -142,14 +140,13 @@ KeyboardOneNumberTwoRH = \relative c'' {
 
 KeyboardOneNumberTwoLH = \relative c''' {
     \number-two-setup \clef treble
-    
-    \override Slur.ratio = #3
-    cs2( \Celeste ^\p d | cs b) |
+     
+    cs2( ^\p d | cs b) |
     \clef bass \bar "[|:"
-    cs,,2( \Piano d | cs b) |
+    cs,,2( d | cs b) | \bar ":|]"
     \repeat unfold 3 { cs2 d } | cs b | cs d | cs d | g,8( d' ~ d2.) | e,8( b' ~ b2.) |
     d,8( a' d2.) | cs,8( gs' cs2.) | b,2 ~ <b b'> ~ | <b _~ b'> <b b'> |
-    d!8 d'! ~ d2. | R1 * 3 | d,8( \Piano a' e'2.) | cs,8( gs' cs2.)
+    d!8 d'! ~ d2. | R1 * 3 | d,8(a' e'2.) | cs,8( gs' cs2.)
     \repeat unfold 2 {
         d,8( a' e'2.) | cs,8( gs' cs2.)
     }
@@ -188,7 +185,7 @@ KeyboardOneNumberTwoLH = \relative c''' {
     << { \voiceOne \stemUp r8 a( b fs' ~ fs a, b fs') } \\ { \voiceTwo ds,1 } >>
     d!1 | R1 |
     \tempo \markup { \large "Easy Swing (Ben Folds)" }
-    a4 ^\markup { \dynamic "mf" \italic "- litely" } \VintOrWurly
+    a4 ^\markup { \dynamic "mf" \italic "- litely" }
     \tuplet 3/2 { e'8( fs gs } a4-.) cs,-. | ds'-. r r2 |
     a,4 \tuplet 3/2 { fs'8( g gs } a4-.) fs,-. | a'-. r8 a-. r e4-- cs8 |
     a4 \tuplet 3/2 { e'8( fs gs } a4-.) cs,-. | ds'-. r r2 | d,!4-. r r2 | R1 |

@@ -11,7 +11,10 @@ KeyboardOneOverture = {
         } 
         <<
             \new Staff = "right" { \KeyboardOneNumberOneRH }
-            \new Staff = "left" { \KeyboardOneNumberOneLH }
+            \new Staff = "left" { 
+                \override PianoStaff.Arpeggio.stencil = #ly:arpeggio::brew-chord-bracket
+                \KeyboardOneNumberOneLH 
+            }
         >>
     >>
 }
@@ -25,6 +28,19 @@ KeyboardOneBigBrightBeautiful = {
         <<
             \new Staff = "right" { \KeyboardOneNumberTwoRH }
             \new Staff = "left" { \KeyboardOneNumberTwoLH }
+        >>
+    >>
+}
+
+KeyboardOneAfterBigBrightBeautiful = {
+    <<
+        \new PianoStaff \with { 
+            instrumentName = "Keyboard I" 
+            shortInstrumentName = "Kbd. I "
+        } 
+        <<
+            \new Staff = "right" { \KeyboardOneNumberTwoARH }
+            \new Staff = "left" { \KeyboardOneNumberTwoALH }
         >>
     >>
 }
